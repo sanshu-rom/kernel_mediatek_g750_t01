@@ -2,7 +2,7 @@
 # Default settings
 verfile="android.ver"
 curcfg=".config"
-release="n"
+release="y"
 rebuild="n"
 clean="n"
 makeflags="-w"
@@ -10,10 +10,10 @@ makedefs="V=1"
 makejobs=${MAKEJOBS}
 curdir=`pwd`
 if [ "${KBUILD_OUTPUT_SUPPORT}" == "yes" ];then
-  outdir=../${MTK_ROOT_OUT}/KERNEL_OBJ
+  outdir=/opt/android/${MTK_ROOT_OUT}/KERNEL_OBJ
   mkdir -p $outdir
   mkdir -p mediatek/custom
-  ln -fns ../../../${MTK_ROOT_CUSTOM_OUT} mediatek/custom/out
+  ln -fns /opt/android/${MTK_ROOT_CUSTOM_OUT} mediatek/custom/out
 fi
 
 usage() {
@@ -61,7 +61,7 @@ while test -n "$1"; do
     shift
 done
 
-source ../mediatek/build/shell.sh ../ kernel
+source ../../../mediatek/build/shell.sh ../ wiko
 defcfg="${MTK_ROOT_GEN_CONFIG}/kconfig"
 if [ "${KBUILD_OUTPUT_SUPPORT}" == "yes" ]; then
   makeflags+=" O=$outdir"
