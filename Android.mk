@@ -13,7 +13,7 @@
 
 MTK_CURRENT_KERNEL_DIR := $(call my-dir)
 ## ifeq (kernel, $(lastword  $(subst /, , $(MTK_CURRENT_KERNEL_DIR))))
-KERNEL_DIR := $(ANDROID_ROOT)/kernel/mediatek/wiko
+KERNEL_DIR := $(ANDROID_ROOT)/kernel/mediatek/g750_t01
 #KERNEL_DIR := $(call my-dir)
 KERNEL_DIR_TO_ROOT := $(ANDROID_ROOT)
 ARCH ?= arm
