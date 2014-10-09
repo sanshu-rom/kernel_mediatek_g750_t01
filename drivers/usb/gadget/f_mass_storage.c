@@ -313,7 +313,7 @@ static const char fsg_string_interface[] = "Mass Storage";
 /*Caution: Use the method would cause write performance drop!!*/
 #define SYNC_THRESHOLD 0 /*This value should be tuned EX:(508*8*1024)*/
 /*-------------------------------------------------------------------------*/
-#if defined (CUSTOM_WIKO_VERSION)
+#if defined (CUSTOM_G750_T01_VERSION)
 #define BRAND_NAME  "HIGHWAY" 
 #define MODEL_NAME1 "MASS Storage"
 #define MODEL_NAME2 MODEL_NAME1
